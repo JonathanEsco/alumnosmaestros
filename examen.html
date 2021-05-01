@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>Autoevaluacion</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" charset="utf-8">
+ <link rel="stylesheet" href="login.css">
+<script language="JavaScript">
+ 
+var resp = new Array;
+var faite = new Array;
+var score = 0;
+ 
+resp[1] = "a";
+resp[2] = "b";
+resp[3] = "c";
+resp[4] = "b";
+resp[5] = "c";
+ 
+function Engine(question, repose)
+{
+   if (repose != resp[question])
+	 {
+             if (!faite[question])
+			        {faite[question] = -1;}
+                }
+        else {
+ 
+                if (!faite[question]) {
+                        faite[question] = -1;
+                        score++;
+                        alert("¡Correcto! Tu puntuación es : " + score );
+                        }
+ 
+                }
+}
+ 
+function Nivel () {
+ 
+        
+        if (score >= 4) {
+                alert(score + "/5 " + "APROBADO");
+                }
+        if (score < 4) {
+                alert("Su puntuación es: "+ score
+				+"\nLa puntuación máxima que podía obtener es 5"
+				+"\nTiene que reviazar nuevamente sus lecciones");
+                }
+}
+ 
+</script>
+</head>
+ 
+<body align ="center" bgcolor="#FFFFFF" text="#000000">
+<table type="examen" width=80% height=80% border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#336699">
+  <tr>
+    <td width="50" rowspan="2"><img src="logo.png" width="50" height="50"></td>
+    <td width="515" class="TopicTitle"><font face="Verdana, Arial, Helvetica, sans-serif" color="#ff0000"><b>Examen</b></font></td>
+  </tr>
+  <tr>
+  </tr>
+  <tr bgcolor="#000000">
+    <td> </td>
+    <td class="TopicSubtitle"><font face="Verdana, Arial, Helvetica, sans-serif" color="#ff000">Primer parcial </font></td>
+  </tr>
+  <tr>
+    <td height="521"> </td>
+    <td height="521">
+      <div align="center">
+<div align="left">
+<FORM NAME="formulario" ACTION="">
+            <p><font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">1.
+              ¿Los circuitos de una computadora se construyen mediante ?</font></p>
+            <p> <font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input name=1 onClick="Engine(1, this.value)" type=radio value=a>
+              a. La lógica combinatoria y secuencial.</font></p>
+            <p> <font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input name=1 onClick="Engine(1, this.value)" type=radio value=b>
+              b. La lógica relacional.</font></p>
+            <p> <font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input name=1 onClick="Engine(1, this.value)" type=radio value=c>
+              c. La lógica conceptual.</font></p>
+            <p><font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+              <br>
+              2. ¿La lógica de la computadora se basa en las reglas de?</font></p>
+            <p> <font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input name=2 onClick="Engine(2, this.value)" type=radio value=a>
+              a. La lógica Booleana.</font></p>
+            <p> <font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input name=2 onClick="Engine(2, this.value)" type=radio value=b>
+              b. El álgebra Booleana.</font></p>
+            <p> <font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input name=2 onClick="Engine(2, this.value)" type=radio value=c>
+              c. Las tablas de verdad.</font></p>
+            <p> </p>
+            <p><font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">3.
+              ¿La salida y el estado de un circuito de lógica secuencial
+              depende del estado anterior y de?</font></p>
+            <p> <font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input name=3 onClick="Engine(3, this.value)" type=radio value=a>
+              a. De los conjuntos actuales de combinaciones.</font></p>
+            <p> <font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input name=3 onClick="Engine(3, this.value)" type=radio value=b>
+              b. De los conjuntos actuales de secuencias.</font></p>
+            <p> <font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input name=3 onClick="Engine(3, this.value)" type=radio value=c>
+              c. De los conjuntos actuales de entradas.</font></p>
+            <p> </p>
+            <p><font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">4.
+              ¿El funcionamiento de la computadora puede simularse por medio de?</font></p>
+            <p> <font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input name=4 onClick="Engine(4, this.value)" type=radio value=a>
+              a. Un modelo estructurado.</font></p>
+            <p> <font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input name=4 onClick="Engine(4, this.value)" type=radio value=b>
+              b. Un modelo simple.</font></p>
+            <p> <font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input name=4 onClick="Engine(4, this.value)" type=radio value=c>
+              c. Un diagrama de procesos.</font></p>
+            <p> </p>
+            <p><font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">5.
+              ¿Los pasos del Pequeño Hombre reflejan? </font></p>
+            <p> <font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input name=5 onClick="Engine(5, this.value)" type=radio value=a>
+              a. Los de una unidad de CD-ROM.</font></p>
+            <p> <font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input name=5 onClick="Engine(5, this.value)" type=radio value=b>
+              b. Los de una unidad de disco.</font></p>
+            <p> <font color="#ffffff" face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input name=5 onClick="Engine(5, this.value)" type=radio value=c>
+              c. Los de una unidad central de procesamiento (CPU).</font></p>
+            <p></p>
+            <p>
+              <button name=Resulta onClick=Nivel() type=button value=Resultados>Resultados</button>
+              <button type="button" name="repose" value="Respuestas Correctas"
+	             onClick="alert('reposes Correctas \n\n 1A  2B  3C 4B  5C')">Respuestas Correctas</button>
+              <button type="reset" value="Borrar resultados" name="reset">Borrar resultados</button>
+               <input style= "background-color: red; border: none; color: white; padding: 8px 32px; text-decoration: none; margin: 2px 1px; cursor: pointer;" type="button"onclick="location.href='main.html'" value=salir></input>
+            </p>
+            <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">* Para
+              tomar nuevamente la autoevaluación presione el botón
+              'F5' </font></p>
+            </FORM>
+  </div>
+      </div>
+    </td>
+  </tr>
+</table>
+<p> </p>
+ 
+</body>
+</html>

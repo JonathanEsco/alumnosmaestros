@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="login.css">
- <title>Profesores</title>
+ <title>Alumnos</title>
 </head>
 
 <body style="background-color:#00">
@@ -11,11 +11,11 @@
 <table style="background-color:#00">
 <tr style="background-color:#00"><td colspan="2" style=" background-color:#00 padding-bottom:10px;"><label>Iogin</label></td></tr>
 
-<tr><td rowspan="6"><img src="logo.png"></td><td><label>Profesor</label></td></tr>
+<tr><td rowspan="6"><img src="logo.png"></td><td><label>Alumno</label></td></tr>
 
 <tr><td><input type="text" name="txtusuario" placeholder="Ingresar usuario" required /> </td></tr>
 
-<tr><td><label>Contraseña</label></td></tr>
+<tr><td><label>Numero de control</label></td></tr>
 
 <tr><td><input type="password" name="txtpassword" placeholder="Ingresar password" required /> </td></tr>
 
@@ -29,6 +29,7 @@
 </body>
 
 </html>
+
 
 <?php
 
@@ -55,7 +56,7 @@ if(isset($_POST['btningresar']))
 	$nombre=$_POST['txtusuario'];
 	$pass=$_POST['txtpassword'];
 	
-	$query=mysqli_query($conn,"Select * from profesores where usuario = '".$nombre."' and contraseña = '".$pass."'");
+	$query=mysqli_query($conn,"Select * from alumnos where usuario = '".$nombre."' and numcont = '".$pass."'");
 	$nr=mysqli_num_rows($query);
 	
 	if(!isset($_SESSION['nombredelusuario']))
@@ -63,11 +64,11 @@ if(isset($_POST['btningresar']))
 	if($nr == 1)
 	{
 		$_SESSION['nombredelusuario']=$nombre;
-		header("location: pagina.php");
+		header("location: paginaalumnos.php");
 	}
 	else if ($nr == 0)
 	{
-		echo "<script>alert('Usuario no existe');window.location= 'index.php' </script>";
+		echo "<script>alert('Usuario no existe');window.location= 'alumnos.php' </script>";
 	}
 	}
 }

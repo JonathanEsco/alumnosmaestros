@@ -11,9 +11,10 @@ table
 {
 	margin:0;
 	border: 0px solid #353A46;
-	background-color: #000;
+	background-color: black;
+	color: black;
 	top: 50%;
-	left: 50%;
+	left: 35%;
 	position: absolute;
 	transform: translate(-50%,-50%);
 }
@@ -27,6 +28,7 @@ input[type=text], input[type=password]
 {
 	width: 100%;
 	background-color: #000;
+	color: red;
   	padding: 12px 20px;
   	margin: 8px 0;
   	box-sizing: border-box;
@@ -34,9 +36,21 @@ input[type=text], input[type=password]
   	border-bottom: 2px solid red;
 }
 
+button
+{
+	background-color: red;
+  	border: none;
+  	color: white;
+  	padding: 8px 32px;
+  	text-decoration: none;
+  	margin: 2px 1px;
+  	cursor: pointer;
+}
+
 label
 {
 	font-size:16px;
+	color: red;
 	font-weight: bold;
 }
 
@@ -45,9 +59,9 @@ input[type=submit]
 	background-color: red;
   	border: none;
   	color: white;
-  	padding: 16px 32px;
+  	padding: 8px 32px;
   	text-decoration: none;
-  	margin: 4px 2px;
+  	margin: 2px 1px;
   	cursor: pointer;
 }
 
